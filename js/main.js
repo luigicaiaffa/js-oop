@@ -14,10 +14,16 @@ class Veicolo {
     return `Veicolo: Auto
     Marca: ${this.marca} 
     Anno: ${this.anno} 
-    Colore: ${this.colore}`
+    Colore: ${this.colore}`;
+  }
+
+  calcolaEta() {
+    const data = new Date();
+    const annoAttuale = data.getFullYear();
+    const etaVeicolo = annoAttuale - this.anno;
+    return `Il Veicolo ha ${etaVeicolo} anni`;
   }
 }
-
 
 // Creiamo una nuova istanza di veicolo che rappresenti una Fiat 2019 blu.
 const fiat = new Veicolo("Fiat", "2019", "Blu");
@@ -27,3 +33,4 @@ console.log(fiat);
 console.log(fiat.informazioni());
 
 // Calcoliamo l'età della vettura utilizzando il metodo "calcolaEta()"
+console.log(fiat.calcolaEtà());
