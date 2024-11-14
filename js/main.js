@@ -4,14 +4,14 @@ class Veicolo {
   anno;
   colore;
 
-  constructor(marcaVeicolo, annoVeicolo, coloreVeicolo) {
-    this.marca = marcaVeicolo;
-    this.anno = annoVeicolo;
-    this.colore = coloreVeicolo;
+  constructor(_marca, _anno, _colore) {
+    this.marca = _marca;
+    this.anno = _anno;
+    this.colore = _colore;
   }
 
   informazioni() {
-    return `Veicolo: Auto
+    return `
     Marca: ${this.marca} 
     Anno: ${this.anno} 
     Colore: ${this.colore}`;
@@ -25,12 +25,27 @@ class Veicolo {
   }
 }
 
+class Automobile extends Veicolo {
+  numeroPorte;
+  carburante;
+
+  constructor(_marca, _anno, _colore, _numeroPorte, _carburante) {
+    super(_marca, _anno, _colore);
+    this.numeroPorte = _numeroPorte;
+    this.carburante = _carburante;
+  }
+}
+
 // Creiamo una nuova istanza di veicolo che rappresenti una Fiat 2019 blu.
-const fiat = new Veicolo("Fiat", "2019", "Blu");
-console.log(fiat);
+const nuovoVeicolo = new Veicolo("Fiat", "2019", "Blu");
+console.log(nuovoVeicolo);
 
 // Otteniamo le informazioni della vettura utilizzando il metodo "informazioni()"
-console.log(fiat.informazioni());
+console.log(nuovoVeicolo.informazioni());
 
 // Calcoliamo l'età della vettura utilizzando il metodo "calcolaEta()"
-console.log(fiat.calcolaEta());
+console.log(nuovoVeicolo.calcolaEta());
+
+// Istanziamo una nuova Automobile (Opel, 2020, nera, con 4 porte, a benzina)
+const nuovaAutomobile = new Automobile("Opel", "2020", "Nera", "4", "Benzina")
+console.log(nuovaAutomobile);
