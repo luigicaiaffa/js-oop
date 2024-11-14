@@ -34,6 +34,15 @@ class Automobile extends Veicolo {
     this.numeroPorte = _numeroPorte;
     this.carburante = _carburante;
   }
+
+  informazioniAuto() {
+    return `Veicolo: Automobile
+    Marca: ${this.marca} 
+    Anno: ${this.anno} 
+    Colore: ${this.colore}
+    Carburante: ${this.carburante}
+    Numero di porte: ${this.numeroPorte}`;
+  }
 }
 
 // Creiamo una nuova istanza di veicolo che rappresenti una Fiat 2019 blu.
@@ -47,5 +56,5 @@ console.log(nuovoVeicolo.informazioni());
 console.log(nuovoVeicolo.calcolaEta());
 
 // Istanziamo una nuova Automobile (Opel, 2020, nera, con 4 porte, a benzina)
-const nuovaAutomobile = new Automobile("Opel", "2020", "Nera", "4", "Benzina")
-console.log(nuovaAutomobile);
+const nuovaAutomobile = new Automobile("Opel", "2020", "Nera", "4", "Benzina");
+console.log(nuovaAutomobile.informazioniAuto());
