@@ -33,4 +33,4 @@ console.log(fiat);
 console.log(fiat.informazioni());
 
 // Calcoliamo l'età della vettura utilizzando il metodo "calcolaEta()"
-console.log(fiat.calcolaEtà());
+console.log(fiat.calcolaEta());
